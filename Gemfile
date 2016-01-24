@@ -13,7 +13,7 @@ gem 'pry'
 gem 'shotgun'
 
 group :test do
-  gem 'database_cleaner', '~> 1.4.1'
+  gem 'database_cleaner', '~> 1.5.1'
   gem 'shoulda-matchers'
   gem 'mongoid-rspec'
   gem 'rack-test'

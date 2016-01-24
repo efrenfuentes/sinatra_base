@@ -5,17 +5,14 @@ ENV['RACK_ENV'] ||= 'test'
 
 require File.expand_path("../../config/environment", __FILE__)
 
+require 'rack/test'
+require 'support/database_cleaner'
+require 'support/factory_girl'
+require 'support/mongoid_rspec'
+require 'support/shoulda_matchers'
+
 RSpec.configure do |config|
   config.include Rack::Test::Methods
-
-  config.before(:each) do
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.start
-  end
-
-  config.after do
-    DatabaseCleaner.clean
-  end
 end
 
 def app
