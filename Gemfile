@@ -19,10 +19,11 @@ group :test do
   gem 'mongoid-rspec'
   gem 'rack-test'
   gem 'rspec'
-  gem 'capybara'
+  gem 'cucumber'
 end
 
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'capybara'
 end
